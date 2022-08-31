@@ -7,6 +7,10 @@
 </head>
 <body>
 <a href="/login">Авторизация</a>
+<br>
 <a href="/reg">Регистрация</a>
+{% if message %}
+    {{ message }}
+{% endif %}
 </body>
 </html>
