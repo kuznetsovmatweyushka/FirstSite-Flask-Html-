@@ -3,29 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Authorization</title>
+    <title>Главная страница</title>
 </head>
 <body>
-{% if form %}
-    <form action="" method="post">
-
-        {{ form.csrf_token() }}
-
-        {% for field in form if field.name != "csrf_token" %}
-        <p>{{ field.label() }}</p>
-        <p>{{ field }}
-            {% for error in field.errors %}
-                {{ error }}
-            {% endfor %}
-        </p>
-        {% endfor %}
-
-    </form>
-{% endif %}   
-{% if message %}
-{{ message }}
-<a href="/bio">Bio</a>
-{% endif %}
+<a href="/login">Авторизация</a>
+<a href="/reg">Регистрация</a>
 </body>
-
 </html>
